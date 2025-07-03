@@ -56,7 +56,7 @@ $result = mysqli_query($conn, "SELECT * FROM kegiatan");
     <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h1 class="mb-0">Dashboard Kegiatan</h1>
-            <a href="../admin_logout.php" class="btn btn-danger">Logout</a>
+            <a href="../logout.php" class="btn btn-danger">Logout</a>
         </div>
 
         <a href="tambah_kegiatan.php" class="btn btn-success mb-4">+ Tambah Kegiatan</a>
