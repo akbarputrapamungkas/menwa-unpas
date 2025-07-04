@@ -1,758 +1,845 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="keywords"
-      content="menwa, mahawarman, resimen mahasiswa, universitas pasundan, bandung, universitas, batalyon IV, kompi E, bela negara, patriotisme, disiplin"
-    />
+    <meta name="keywords" content="menwa, mahawarman, resimen mahasiswa, universitas pasundan, bandung, universitas, batalyon IV, kompi E, bela negara, patriotisme, disiplin" />
     <meta name="author" content="Akbar Putra Pamungkas" />
-    <meta
-      name="description"
-      content="Halaman website resmi Resimen Mahawarman Batalyon III/Yudha Jaya Kompi E Universitas Pasundan Bandung. Membentuk karakter pemimpin berjiwa patriot."
-    />
+    <meta name="description" content="Halaman website resmi Resimen Mahasiswa Mahawarman Batalyon IV Kompi E Universitas Pasundan Bandung. Membentuk karakter pemimpin berjiwa patriot." />
     <link rel="shortcut icon" href="img/logo-menwa1.png" type="image/x-icon" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <title>Menwa Unpas - Resimen Mahasiswa Universitas Pasundan</title>
 
     <style>
-      :root {
-        --primary-menwa: #7e22ce;
-        /* Warna ungu utama: #7e22ce */
-        --accent-color: #9b4bd6;
-        /* Ungu sedikit lebih terang untuk aksen dan hover */
-        --light-bg: #f5edfc;
-        /* Latar belakang ungu sangat pucat, hampir putih */
-        --dark-bg: #5f1a9b;
-        /* Ungu gelap untuk navbar scrolled dan footer */
-        --text-color: #333;
-        --white: #ffffff;
-      }
-
-      * {
-        box-sizing: border-box;
-        scroll-behavior: smooth;
-      }
-
-      body {
-        font-family: "Lato", sans-serif;
-        margin: 0;
-        padding: 0;
-        color: var(--text-color);
-      }
-
-      section {
-        padding-top: 6rem;
-        padding-bottom: 6rem;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-      }
-
-      .navbar {
-        background-color: transparent;
-        transition: background-color 0.5s ease-in-out,
-          box-shadow 0.3s ease-in-out;
-      }
-
-      .navbar-brand,
-      .nav-link,
-      .navbar-toggler-icon {
-        color: var(--white) !important;
-      }
-
-      .navbar.scrolled {
-        background-color: rgba(95, 26, 155, 0.7) !important;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      }
-
-      .navbar.scrolled .nav-link,
-      .navbar.scrolled .navbar-brand {
-        color: var(--white) !important;
-      }
-
-      .navbar .nav-link:hover {
-        color: var(--accent-color) !important;
-      }
-
-      .jumbotron {
-        position: relative;
-        height: 100vh;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--white);
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      }
-
-      .bg-video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-        z-index: -1;
-      }
-
-      .video-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 0;
-      }
-
-      .jumbotron .container {
-        z-index: 1;
-      }
-
-      .jumbotron .logo img {
-        width: 250px;
-        margin-bottom: 20px;
-      }
-
-      .jumbotron h1 {
-        font-size: 3.5rem;
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
-
-      .jumbotron h5 {
-        font-size: 1.8rem;
-        margin-bottom: 30px;
-      }
-
-      .jumbotron hr {
-        height: 3px;
-        background-color: var(--white);
-        border: none;
-        width: 80px;
-        margin: 20px auto;
-        opacity: 1;
-      }
-
-      .about {
-        background-color: var(--light-bg);
-      }
-
-      .about img {
-        border-radius: 8px;
-      }
-
-      #visi-misi {
-        background-color: var(--white);
-      }
-
-      #visi-misi h5 {
-        color: var(--primary-menwa);
-        font-weight: bold;
-      }
-
-      #visi-misi ul {
-        list-style: none;
-        padding-left: 0;
-      }
-
-      #visi-misi ul li {
-        position: relative;
-        padding-left: 25px;
-        margin-bottom: 10px;
-      }
-
-      #visi-misi ul li::before {
-        content: "\f058";
-        font-family: "Font Awesome 6 Free";
-        font-weight: 900;
-        color: var(--accent-color);
-        position: absolute;
-        left: 0;
-        top: 0;
-      }
-
-      #kegiatan {
-        background-color: var(--light-bg);
-      }
-
-      #kegiatan .card {
-        border: none;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-
-      #kegiatan .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      }
-
-      #kegiatan .card img {
-        height: 200px;
-        object-fit: cover;
-        width: 100%;
-      }
-
-      #kegiatan .card-body {
-        padding: 1.5rem;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-
-      #kegiatan .card-title {
-        font-size: 1.25rem;
-        font-weight: bold;
-        color: var(--primary-menwa);
-      }
-
-      #kegiatan .card-text {
-        font-size: 0.95rem;
-        color: var(--text-color);
-      }
-
-      .btn-primary {
-        background-color: var(--primary-menwa) !important;
-        border-color: var(--primary-menwa) !important;
-      }
-
-      .btn-primary:hover {
-        background-color: var(--accent-color) !important;
-        border-color: var(--accent-color) !important;
-      }
-
-      .text-primary {
-        color: var(--primary-menwa) !important;
-      }
-
-      .btn-outline-primary {
-        color: var(--primary-menwa) !important;
-        border-color: var(--primary-menwa) !important;
-      }
-
-      .btn-outline-primary:hover {
-        color: var(--white) !important;
-        background-color: var(--primary-menwa) !important;
-      }
-
-      @media (max-width: 768px) {
-        .jumbotron h1 {
-          font-size: 2.5rem;
+        /* Variabel Warna CSS (agar mudah diubah) */
+        :root {
+            --primary-menwa: #7e22ce; /* Warna ungu utama: #7e22ce */
+            --accent-color: #9b4bd6; /* Ungu sedikit lebih terang untuk aksen dan hover */
+            --light-bg: #f5edfc; /* Latar belakang ungu sangat pucat, hampir putih */
+            --dark-bg: #262328; /* HITAM PEKAT untuk navbar scrolled dan footer */
+            --text-color: #333;
+            --white: #ffffff;
+            --gray-subtle: #dee2e6; /* Warna abu-abu terang untuk garis/border */
         }
 
-        .jumbotron h5 {
-          font-size: 1.2rem;
+        /* Reset Box Model dan Smooth Scroll Behavior */
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        /* Pengaturan Font dan Margin Body */
+        body {
+            font-family: "Lato", sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+        }
+
+        /* Pengaturan Umum untuk Setiap Section */
+        section {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: transparent;
+            transition: background-color 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+            z-index: 1030;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: var(--white) !important;
+        }
+
+        .navbar-toggler-icon {
+            filter: brightness(0) invert(1);
+        }
+
+        .navbar.scrolled {
+            /* Warna semi-transparan berdasarkan dark-bg (hitam) */
+            background-color: rgb(112, 46, 170, 0.7) !important; /* Menggunakan RGB dari --dark-bg */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar.scrolled .nav-link,
+        .navbar.scrolled .navbar-brand {
+            color: var(--white) !important;
+        }
+
+        .navbar .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+
+        /* Jumbotron (Hero Section) Styles */
+        .jumbotron {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+            display: block;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+            display: block;
+        }
+
+        .jumbotron .container {
+            z-index: 1;
         }
 
         .jumbotron .logo img {
-          width: 150px;
+            width: 250px;
+            margin-bottom: 20px;
         }
 
-        section {
-          padding-top: 4rem;
-          padding-bottom: 4rem;
-          min-height: auto;
+        .jumbotron h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
         }
 
-        .navbar-brand img {
-          width: 25px;
+        .jumbotron h5 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
         }
 
-        .navbar-brand {
-          font-size: 1.2rem;
-        }
-        .pendaftaran {
-          margin: 0 0 2rem 0;
-        }
-        .about-1 {
-          margin: 0 0 2rem 0;
-        }
-      }
-
-      @media (min-width: 992px) {
-        .jumbotron {
-          height: 100vh;
+        .jumbotron hr {
+            height: 3px;
+            background-color: var(--white);
+            border: none;
+            width: 80px;
+            margin: 20px auto;
+            opacity: 1;
         }
 
-        section {
-          min-height: 100vh;
-          padding-top: 6rem;
-          padding-bottom: 6rem;
+        /* About Section Styles */
+        .about {
+            background-color: var(--light-bg);
         }
 
-        .about .row {
-          flex-direction: row;
+        .about img {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-      }
+
+        /* Visi Misi Section Styles */
+        #visi-misi {
+            background-color: var(--white);
+        }
+
+        #visi-misi h5 {
+            color: var(--primary-menwa);
+            font-weight: bold;
+        }
+
+        #visi-misi ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        #visi-misi ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+
+        #visi-misi ul li::before {
+            content: "\f058";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* Kegiatan Section Styles */
+        #kegiatan {
+            background-color: var(--light-bg);
+        }
+
+        #kegiatan .card {
+            border: none;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #kegiatan .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        #kegiatan .card img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        #kegiatan .card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #kegiatan .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--primary-menwa);
+        }
+
+        #kegiatan .card-text {
+            font-size: 0.95rem;
+            color: var(--text-color);
+        }
+
+        /* Button & Text Color Overrides */
+        .btn-primary {
+            background-color: var(--primary-menwa) !important;
+            border-color: var(--primary-menwa) !important;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-color) !important;
+            border-color: var(--accent-color) !important;
+        }
+
+        .text-primary {
+            color: var(--primary-menwa) !important;
+        }
+
+        .btn-outline-primary {
+            color: var(--primary-menwa) !important;
+            border-color: var(--primary-menwa) !important;
+        }
+
+        .btn-outline-primary:hover {
+            color: var(--white) !important;
+            background-color: var(--primary-menwa) !important;
+        }
+
+        /* Admin Login Button Styles */
+        .admin-login-link {
+            font-size: 0.7rem;
+            opacity: 0.3;
+            color: var(--white) !important;
+            text-decoration: none;
+            transition: opacity 0.3s ease, font-size 0.3s ease;
+            cursor: pointer;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .admin-login-link:hover,
+        .admin-login-link:focus {
+            opacity: 1;
+            font-size: 0.8rem;
+        }
+
+        /* Footer Specific Styles */
+        footer {
+            background-color: var(--dark-bg) !important;
+            color: var(--white);
+            padding-top: 3.5rem;
+            padding-bottom: 2.5rem;
+        }
+
+        footer .footer-logo-container img {
+            max-width: 100px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        footer h5,
+        footer h6 {
+            color: var(--accent-color) !important;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+        }
+
+        footer p i {
+            color: var(--accent-color);
+        }
+
+        footer a {
+            color: var(--white) !important;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--accent-color) !important;
+            text-decoration: underline;
+        }
+
+        footer .social-icons a {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: var(--white) !important;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: var(--accent-color) !important;
+        }
+
+        footer .footer-bottom-bar {
+            padding-top: 1.5rem;
+            /* Ubah border-top agar terlihat baik di latar belakang hitam */
+            border-top: 1px solid rgba(255, 255, 255, 0.2); /* Sedikit lebih tebal/terlihat di hitam */
+            margin-top: 2rem;
+            font-size: 0.8rem;
+        }
+
+        footer .footer-bottom-bar .admin-login-link {
+            font-size: 0.7rem;
+            opacity: 0.3;
+            transition: opacity 0.3s ease;
+        }
+
+        footer .footer-bottom-bar .admin-login-link:hover {
+            opacity: 1;
+        }
+
+        /* Google Maps iframe responsif */
+        .map-responsive {
+            overflow: hidden;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio (height / width * 100%) */
+            position: relative;
+            height: 0;
+            border-radius: 8px; /* Sudut membulat */
+        }
+
+        .map-responsive iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border: 0; /* Menghilangkan border default iframe */
+        }
+
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            /* Jumbotron: Background image for mobile, hide video */
+            .jumbotron {
+                background-image: url('img/003.jpg'); /* !!! PASTIKAN PATH INI BENAR !!! */
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100vh; /* Adjust height for mobile jumbotron if needed */
+            }
+
+            .jumbotron .bg-video,
+            .jumbotron .video-overlay {
+                display: none; /* Hide video and its overlay on mobile */
+            }
+
+            /* --- FONT SIZE ADJUSTMENTS FOR MOBILE --- */
+            .jumbotron h1 {
+                font-size: 1.8rem; /* Lebih kecil lagi */
+                line-height: 1.2;
+            }
+
+            .jumbotron h5 {
+                font-size: 0.9rem; /* Lebih kecil lagi */
+                line-height: 1.4;
+                margin-bottom: 15px;
+            }
+
+            .jumbotron p {
+                font-size: 0.8rem; /* Slogan size */
+                line-height: 1.5;
+                margin-bottom: 15px;
+            }
+
+            .jumbotron .btn {
+                font-size: 0.8rem; /* CTA button font size */
+                padding: 0.5rem 1rem;
+            }
+
+
+            section {
+                padding-top: 3rem; /* Reduced from 4rem */
+                padding-bottom: 3rem; /* Reduced from 4rem */
+                min-height: auto;
+            }
+
+            h2.display-5 { /* Main section titles */
+                font-size: 1.5rem !important; /* Judul section utama lebih kecil lagi */
+                margin-bottom: 1.5rem !important;
+            }
+
+            .about .fs-5 p { /* Paragraphs in About section */
+                font-size: 0.85rem;
+            }
+
+            .about .btn {
+                font-size: 0.85rem; /* Button in About section */
+                padding: 0.5rem 1.1rem;
+            }
+
+            #visi-misi .card-title { /* Visi/Misi titles in cards */
+                font-size: 1rem;
+            }
+
+            #visi-misi .card-text.lead { /* Visi text */
+                font-size: 0.85rem;
+            }
+
+            #visi-misi ul li { /* Misi list items */
+                font-size: 0.85rem;
+                padding-left: 18px; /* Adjust padding for smaller text */
+            }
+
+            #visi-misi ul li::before {
+                font-size: 0.85rem; /* Adjust icon size */
+            }
+
+            #kegiatan .card-title { /* Kegiatan card titles */
+                font-size: 1rem;
+            }
+
+            #kegiatan .card-text { /* Kegiatan card descriptions */
+                font-size: 0.8rem;
+            }
+
+            #kegiatan .card img {
+                height: 120px; /* Reduced image height for mobile cards */
+            }
+
+            #kegiatan .btn.btn-lg { /* Tombol "Lihat Semua Kegiatan Kami" */
+                font-size: 0.9rem;
+                padding: 0.6rem 1.5rem;
+            }
+
+
+            .navbar-brand img {
+                width: 25px;
+            }
+
+            .navbar-brand {
+                font-size: 1.1rem; /* Brand navbar sedikit lebih kecil */
+            }
+
+            .pendaftaran {
+                margin: 0 0 1.5rem 0;
+            }
+
+            .about-1 {
+                margin: 0 0 1.5rem 0;
+            }
+
+            .admin-login-link {
+                margin-top: 5px;
+                display: block;
+                margin-left: 0;
+            }
+
+            footer .text-md-start,
+            footer .text-md-end {
+                text-align: center !important;
+            }
+
+            /* Adjust column spacing for mobile footer */
+            footer .col-lg-4, footer .col-lg-2, footer .col-lg-3 {
+                margin-bottom: 1rem !important;
+            }
+            footer .col-lg-4:last-of-type,
+            footer .col-lg-2:last-of-type,
+            footer .col-lg-3:last-of-type,
+            footer .col-md-6:last-of-type {
+                margin-bottom: 0 !important;
+            }
+
+            footer p {
+                font-size: 0.8rem;
+                line-height: 1.5;
+            }
+
+            footer h5,
+            footer h6 {
+                font-size: 1.1rem !important;
+                margin-bottom: 1rem !important;
+            }
+
+            footer .social-icons a {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+            /* Jumbotron: Show video for desktop, no background image */
+            .jumbotron {
+                height: 100vh;
+                background-image: none;
+            }
+
+            .jumbotron .bg-video,
+            .jumbotron .video-overlay {
+                display: block;
+            }
+
+            section {
+                min-height: 100vh;
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+            }
+
+            .about .row {
+                flex-direction: row;
+            }
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <nav class="navbar fixed-top navbar-expand-lg shadow-lg navbar-dark">
-      <div class="container">
-        <a class="navbar-brand" href="index.php">
-          <img
-            src="img/logo-menwa.png"
-            width="30"
-            alt="logo menwa"
-            class="me-2"
-          />
-          MENWA UNPAS
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto text-center">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">Tentang Kami</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#visi-misi">Visi & Misi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#kegiatan">Kegiatan</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="mediaDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                >Media</a
-              >
-              <ul
-                class="dropdown-menu dropdown-menu-dark"
-                aria-labelledby="mediaDropdown"
-              >
-                <li>
-                  <a class="dropdown-item" href="galeri.php">Galeri Foto</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="video.php"
-                    >Video Dokumentasi</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="kontak.php">Kontak</a>
-            </li>
-          </ul>
+        <div class="container">
+            <a class="navbar-brand" href="index.php">
+                <img src="img/logo-menwa.png" width="30" alt="logo menwa" class="me-2" />
+                MENWA UNPAS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#visi-misi">Visi & Misi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kegiatan">Kegiatan</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="mediaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="mediaDropdown">
+                            <li>
+                                <a class="dropdown-item" href="galeri.php">Galeri Foto</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="video.php">Video Dokumentasi</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kontak.php">Kontak</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
 
     <section class="jumbotron text-center" id="home">
-      <video class="bg-video" autoplay muted loop playsinline>
-        <source src="img/join_p1.mp4" type="video/mp4" />
-        Browser Anda tidak mendukung pemutaran video.
-      </video>
-      <div class="video-overlay"></div>
-      <div class="container position-relative z-1">
-        <div class="logo my-auto" data-aos="fade-up" data-aos-duration="1000">
-          <img
-            src="img/logo-menwa1.png"
-            alt="Resimen Mahasiswa Mahawarman"
-            class="img-fluid mb-4"
-          />
-          <h1 class="display-4 fw-bold">MENWA Mahawarman Kompi E</h1>
-          <h5 class="lead mb-4">
-            Resimen Mahasiswa Mahawarman Batalyon IV/E Universitas
-            Pasundan
-          </h5>
-          <hr class="mx-auto my-4" />
-          <p class="mb-4">
-            Mengabdi, Berdisiplin, dan Berjiwa Patriot untuk Indonesia
-          </p>
-          <a
-            href="pendaftaran.php"
-            class="btn btn-primary btn-lg shadow-sm pendaftaran"
-            data-aos="zoom-in"
-            data-aos-delay="500"
-          >
-            <i class="fas fa-user-plus me-2"></i> Gabung Sekarang
-          </a>
-          <a
-            href="#about"
-            class="btn btn-outline-light btn-lg ms-3 shadow-sm about-1"
-            data-aos="zoom-in"
-            data-aos-delay="700"
-          >
-            <i class="fas fa-info-circle me-2"></i> Pelajari Lebih Lanjut
-          </a>
+        <video class="bg-video" autoplay muted loop playsinline>
+            <source src="img/join_p1.mp4" type="video/mp4" />
+            Browser Anda tidak mendukung pemutaran video.
+        </video>
+        <div class="video-overlay"></div>
+        <div class="container position-relative z-1">
+            <div class="logo my-auto" data-aos="fade-up" data-aos-duration="1000">
+                <img src="img/logo-menwa1.png" alt="Resimen Mahasiswa Mahawarman" class="img-fluid mb-4" />
+                <h1 class="display-4 fw-bold">MENWA Mahawarman Kompi E</h1>
+                <h5 class="lead mb-4">
+                    Resimen Mahasiswa Mahawarman Batalyon IV/E Universitas
+                    Pasundan
+                </h5>
+                <hr class="mx-auto my-4" />
+                <p class="mb-4">
+                    Mengabdi, Berdisiplin, dan Berjiwa Patriot untuk Indonesia
+                </p>
+                <a href="pendaftaran.php" class="btn btn-primary btn-lg shadow-sm" data-aos="zoom-in" data-aos-delay="500">
+                    <i class="fas fa-user-plus me-2"></i> Gabung Sekarang
+                </a>
+                <a href="#about" class="btn btn-outline-light btn-lg ms-3 shadow-sm" data-aos="zoom-in" data-aos-delay="700">
+                    <i class="fas fa-info-circle me-2"></i> Pelajari Lebih Lanjut
+                </a>
+            </div>
         </div>
-      </div>
     </section>
 
     <section class="about" id="about">
-      <div class="container py-5">
-        <div class="row pt-5 justify-content-center">
-          <div class="col-12 text-center mb-5" data-aos="fade-down">
-            <h2 class="display-5 fw-bold">
-              <i class="fas fa-info-circle me-3 text-primary"></i>Tentang Kami
-            </h2>
-          </div>
+        <div class="container py-5">
+            <div class="row pt-5 justify-content-center">
+                <div class="col-12 text-center mb-5" data-aos="fade-down">
+                    <h2 class="display-5 fw-bold">
+                        <i class="fas fa-info-circle me-3 text-primary"></i>Tentang Kami
+                    </h2>
+                </div>
+            </div>
+            <div class="row m-3 justify-content-center align-items-center">
+                <div class="col-md-5 mx-lg-5 mb-4 mb-md-0" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="img/pradik.jpg" alt="Tentang Kami" class="img-fluid shadow-lg rounded" />
+                </div>
+                <div class="col-md-5 fs-5 mx-lg-5 text-center text-md-start" data-aos="fade-left" data-aos-duration="1000">
+                    <p class="mb-3">
+                        Resimen Mahasiswa (Menwa) Mahawarman Batalyon III/Yudha Jaya Kompi E Universitas Pasundan merupakan unit organisasi kemahasiswaan yang berlandaskan Tri Dharma Perguruan Tinggi, dengan fokus pada pembinaan mahasiswa untuk menjadi kader bela negara yang tangguh.
+                    </p>
+                    <p>
+                        Kami berkomitmen untuk mengembangkan potensi mahasiswa dalam aspek kepemimpinan, disiplin, dan etos kerja, sejalan dengan nilai-nilai Pancasila dan UUD 1945. Melalui berbagai program pelatihan dan pengabdian, Menwa Unpas berupaya mencetak generasi muda yang siap berkontribusi positif bagi bangsa dan negara.
+                    </p>
+                    <a href="tentang-kami.php" class="btn btn-primary mt-3">Baca Selengkapnya <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
         </div>
-        <div class="row m-3 justify-content-center align-items-center">
-          <div
-            class="col-md-5 mx-lg-5 mb-4 mb-md-0"
-            data-aos="fade-right"
-            data-aos-duration="1000"
-          >
-            <img
-              src="img/pradik.jpg"
-              alt="Tentang Kami"
-              class="img-fluid shadow-lg rounded"
-            />
-          </div>
-          <div
-            class="col-md-5 fs-5 mx-lg-5 text-center text-md-start"
-            data-aos="fade-left"
-            data-aos-duration="1000"
-          >
-            <p class="mb-3">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-              corporis odit sit dolorem esse ea, minus, ad voluptate quam, eius
-              quisquam qui sint! Praesentium officiis illum ex accusamus dicta
-              nobis a, nesciunt delectus odit aperiam.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-              corporis odit sit dolorem esse ea, minus, ad voluptate quam, eius
-              quisquam qui sint! Praesentium officiis illum ex accusamus dicta
-              nobis a, nesciunt delectus odit aperiam.
-            </p>
-            <a href="tentang-kami.php" class="btn btn-primary mt-3"
-              >Baca Selengkapnya <i class="fas fa-arrow-right ms-2"></i
-            ></a>
-          </div>
-        </div>
-      </div>
     </section>
 
     <section id="visi-misi" class="bg-light">
-      <div class="container text-center py-5">
-        <div class="row pt-5 justify-content-center">
-          <div class="col-12 text-center mb-5" data-aos="fade-down">
-            <h2 class="display-5 fw-bold">
-              <i class="fas fa-bullseye me-3 text-primary"></i>Visi & Misi
-            </h2>
-          </div>
-        </div>
-        <div class="row justify-content-center g-4">
-          <div class="col-md-5" data-aos="fade-up" data-aos-duration="1000">
-            <div class="card p-4 h-100 shadow-sm border-0">
-              <div class="card-body">
-                <h5 class="card-title text-primary mb-3">Visi</h5>
-                <p class="card-text lead">
-                  Menjadi kader bela negara yang berkarakter Pancasila,
-                  disiplin, loyal, dan berjiwa kepemimpinan untuk kemajuan
-                  Universitas Pasundan dan Bangsa.
-                </p>
-              </div>
+        <div class="container text-center py-5">
+            <div class="row pt-5 justify-content-center">
+                <div class="col-12 text-center mb-5" data-aos="fade-down">
+                    <h2 class="display-5 fw-bold">
+                        <i class="fas fa-bullseye me-3 text-primary"></i>Visi & Misi
+                    </h2>
+                </div>
             </div>
-          </div>
-          <div
-            class="col-md-5"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="200"
-          >
-            <div class="card p-4 h-100 shadow-sm border-0">
-              <div class="card-body">
-                <h5 class="card-title text-primary mb-3">Misi</h5>
-                <ul class="text-start list-unstyled">
-                  <li>
-                    <i class="fas fa-check-circle me-2 text-success"></i>
-                    Membentuk pribadi mahasiswa yang tangguh dan berwawasan
-                    kebangsaan melalui pendidikan dan pelatihan militer dasar.
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle me-2 text-success"></i>
-                    Melatih kedisiplinan, kemandirian, dan kepemimpinan
-                    mahasiswa sesuai norma yang berlaku.
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle me-2 text-success"></i>
-                    Menanamkan semangat bela negara dan cinta tanah air dalam
-                    setiap aktivitas.
-                  </li>
-                  <li>
-                    <i class="fas fa-check-circle me-2 text-success"></i>
-                    Berpartisipasi aktif dalam kegiatan sosial kemasyarakatan
-                    dan mendukung program universitas.
-                  </li>
-                </ul>
-              </div>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-5" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="card p-4 h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary mb-3">Visi</h5>
+                            <p class="card-text lead">
+                                Menjadi kader bela negara yang berkarakter Pancasila,
+                                disiplin, loyal, dan berjiwa kepemimpinan untuk kemajuan
+                                Universitas Pasundan dan Bangsa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="card p-4 h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary mb-3">Misi</h5>
+                            <ul class="text-start list-unstyled">
+                                <li>
+                                    <i class="fas fa-check-circle me-2 text-success"></i>
+                                    Membentuk pribadi mahasiswa yang tangguh dan berwawasan
+                                    kebangsaan melalui pendidikan dan pelatihan militer dasar.
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle me-2 text-success"></i>
+                                    Melatih kedisiplinan, kemandirian, dan kepemimpinan
+                                    mahasiswa sesuai norma yang berlaku.
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle me-2 text-success"></i>
+                                    Menanamkan semangat bela negara dan cinta tanah air dalam
+                                    setiap aktivitas.
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle me-2 text-success"></i>
+                                    Berpartisipasi aktif dalam kegiatan sosial kemasyarakatan
+                                    dan mendukung program universitas.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
 
     <section id="kegiatan">
-      <div class="container text-center py-5">
-        <div class="row pt-5 justify-content-center">
-          <div class="col-12 text-center mb-5" data-aos="fade-down">
-            <h2 class="display-5 fw-bold">
-              <i class="fas fa-calendar-alt me-3 text-primary"></i>Kegiatan Kami
-            </h2>
-          </div>
-        </div>
-        <div class="row g-4 justify-content-center">
-          <div
-            class="col-lg-4 col-md-6 mb-4"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
-            <div class="card h-100">
-              <img
-                src="img/kegiatan1.jpg"
-                class="card-img-top"
-                alt="Pelatihan Dasar"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Pelatihan Pra-Dasar Menwa</h5>
-                <p class="card-text">
-                  Program awal untuk calon anggota Menwa guna membentuk mental
-                  dan fisik yang prima.
-                </p>
-                <a href="#" class="btn btn-outline-primary btn-sm"
-                  >Lihat Detail</a
-                >
-              </div>
+        <div class="container text-center py-5">
+            <div class="row pt-5 justify-content-center">
+                <div class="col-12 text-center mb-5" data-aos="fade-down">
+                    <h2 class="display-5 fw-bold">
+                        <i class="fas fa-calendar-alt me-3 text-primary"></i>Kegiatan Kami
+                    </h2>
+                </div>
             </div>
-          </div>
-          <div
-            class="col-lg-4 col-md-6 mb-4"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="200"
-          >
-            <div class="card h-100">
-              <img
-                src="img/kegiatan2.jpg"
-                class="card-img-top"
-                alt="Upacara Hari Nasional"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Upacara Peringatan Hari Nasional</h5>
-                <p class="card-text">
-                  Partisipasi aktif dalam upacara besar kenegaraan di lingkungan
-                  kampus maupun daerah.
-                </p>
-                <a href="#" class="btn btn-outline-primary btn-sm"
-                  >Lihat Detail</a
-                >
-              </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="card h-100">
+                        <img src="img/kegiatan1.jpg" class="card-img-top" alt="Pelatihan Dasar" />
+                        <div class="card-body">
+                            <h5 class="card-title">Pelatihan Pra-Dasar Menwa</h5>
+                            <p class="card-text">
+                                Program awal untuk calon anggota Menwa guna membentuk mental
+                                dan fisik yang prima.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="card h-100">
+                        <img src="img/kegiatan2.jpg" class="card-img-top" alt="Upacara Hari Nasional" />
+                        <div class="card-body">
+                            <h5 class="card-title">Upacara Peringatan Hari Nasional</h5>
+                            <p class="card-text">
+                                Partisipasi aktif dalam upacara besar kenegaraan di lingkungan
+                                kampus maupun daerah.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="card h-100">
+                        <img src="img/kegiatan3.jpg" class="card-img-top" alt="Latihan Menembak" />
+                        <div class="card-body">
+                            <h5 class="card-title">Latihan Kemiliteran Rutin</h5>
+                            <p class="card-text">
+                                Meliputi latihan fisik, taktik, dan kegiatan menembak untuk
+                                meningkatkan kemampuan dasar.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div
-            class="col-lg-4 col-md-6 mb-4"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="400"
-          >
-            <div class="card h-100">
-              <img
-                src="img/kegiatan3.jpg"
-                class="card-img-top"
-                alt="Latihan Menembak"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Latihan Kemiliteran Rutin</h5>
-                <p class="card-text">
-                  Meliputi latihan fisik, taktik, dan kegiatan menembak untuk
-                  meningkatkan kemampuan dasar.
-                </p>
-                <a href="#" class="btn btn-outline-primary btn-sm"
-                  >Lihat Detail</a
-                >
-              </div>
+            <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="600">
+                <a href="kegiatan.php" class="btn btn-primary btn-lg"><i class="fas fa-images me-2"></i> Lihat Semua Kegiatan Kami</a>
             </div>
-          </div>
         </div>
-        <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="600">
-          <a href="kegiatan.php" class="btn btn-primary btn-lg"
-            ><i class="fas fa-images me-2"></i> Lihat Semua Kegiatan Kami</a
-          >
-        </div>
-      </div>
     </section>
 
-    <!-- <?php include 'inc/footer.php'; ?> -->
-    <!-- footer -->
-    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
-      <div class="container text-center text-md-start">
-        <div class="row text-center text-sm-start">
-          <div class="col-md-3 col-sm-6 mx-auto mt-3">
-            <img src="img/logo-menwa1.png" alt="resimen mahasiswa mahawarman" />
-            <h5 class="text-uppercase mb-4 font-weight-bold text-primary">
-              MENWA Mahawarman
-            </h5>
-            <p>
-              Resimen Mahasiswa Mahawarman Batalyon III/Yudha Jaya Universitas
-              Pasundan adalah wadah pengembangan diri mahasiswa dalam disiplin
-              dan patriotisme.
-            </p>
-          </div>
+    <footer>
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <div class="footer-logo-container mb-3 text-center text-md-start">
+                        <img src="img/logo-menwa1.png" alt="Logo Menwa Unpas" class="img-fluid" />
+                    </div>
+                    <h5 class="text-uppercase text-primary mb-3">
+                        MENWA Mahawarman
+                    </h5>
+                    <p>
+                        Resimen Mahasiswa Mahawarman Batalyon III/Yudha Jaya Universitas Pasundan adalah wadah pengembangan diri mahasiswa dalam disiplin dan patriotisme.
+                    </p>
+                </div>
 
-          <div class="col-md-3 col-sm-6 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold text-primary">
-              Tautan Cepat
-            </h6>
-            <p>
-              <a href="index.php" class="text-white text-decoration-none"
-                >Beranda</a
-              >
-            </p>
-            <p>
-              <a href="tentang-kami.php" class="text-white text-decoration-none"
-                >Tentang Kami</a
-              >
-            </p>
-            <p>
-              <a href="berita.php" class="text-white text-decoration-none"
-                >Berita & Kegiatan</a
-              >
-            </p>
-            <p>
-              <a href="pendaftaran.php" class="text-white text-decoration-none"
-                >Pendaftaran</a
-              >
-            </p>
-          </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase text-primary mb-3">
+                        Tautan Cepat
+                    </h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.php" class="text-white">Beranda</a></li>
+                        <li><a href="tentang-kami.php" class="text-white">Tentang Kami</a></li>
+                        <li><a href="berita.php" class="text-white">Berita & Kegiatan</a></li>
+                        <li><a href="pendaftaran.php" class="text-white">Pendaftaran</a></li>
+                    </ul>
+                </div>
 
-          <div class="col-md-3 col-sm-6 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold text-primary">
-              Kontak Kami
-            </h6>
-            <p>
-              <i class="fas fa-map-marker-alt me-3"></i> Sekretariat Menwa
-              Unpas, Kampus IV Universitas Pasundan, Jl. Dr. Setiabudhi No.193,
-              Bandung, Jawa Barat 40153
-            </p>
-            <p><i class="fas fa-envelope me-3"></i> info@menwaunpas.or.id</p>
-            <p><i class="fas fa-phone-alt me-3"></i> +62 8XX XXXX XXXX</p>
-            <p>
-              <i class="fab fa-instagram me-3"></i>
-              <a
-                href="https://www.instagram.com/menwaunpas/"
-                target="_blank"
-                class="text-white text-decoration-none"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="25"
-                  fill="currentColor"
-                  class="bi bi-instagram"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
-                  /></svg
-              ></a>
-            </p>
-          </div>
-        </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase text-primary mb-3">
+                        Kontak Kami
+                    </h6>
+                    <ul class="list-unstyled">
+                        <li>
+                            <p><i class="fas fa-map-marker-alt me-3"></i> Sekretariat Menwa Unpas, Kampus IV Universitas Pasundan, Jl. Dr. Setiabudhi No.193, Bandung, Jawa Barat 40153</p>
+                        </li>
+                        <li><p><i class="fas fa-envelope me-3"></i> menwauniversitaspasundan@gmail.com</p></li>
+                        <li><p><i class="fas fa-phone-alt me-3"></i> +62 838-8423-246</p></li>
+                    </ul>
+                    <div class="social-icons mt-3">
+                        <a href="https://www.instagram.com/menwaunpas?igsh=NW81MHk2eHpmd3Zu" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="https://wa.me/628388423246" target="_blank" aria-label="whatsapp"><i class="fab fa-whatsapp fa-lg"></i></a>
+                        <a href="https://www.youtube.com/@menwauniversitaspasundan4021" target="_blank" aria-label="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
+                    </div>
+                </div>
 
-        <hr class="my-3" style="background-color: #f8f9fa" />
-        <div class="row d-flex justify-content-center align-items-center">
-          <div class="col-md-7 col-lg-8">
-            <p class="mb-0 text-center text-md-start">
-              ©
-              <?= date('Y') ?>
-              MENWA Mahawarman Batalyon IV/E Universitas Pasundan. Hak Cipta
-              Dilindungi Undang-Undang.
-            </p>
-          </div>
-          <div class="col-md-5 col-lg-4">
-            <div class="text-center text-md-end">
-              <a
-                href="kebijakan-privasi.php"
-                class="text-white text-decoration-none me-3"
-                >Kebijakan Privasi</a
-              >
-              <a
-                href="syarat-ketentuan.php"
-                class="text-white text-decoration-none"
-                >Syarat & Ketentuan</a
-              >
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase text-primary mb-3">Temukan Kami</h6>
+                    <div class="mb-3 map-responsive"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.9839352936746!2d107.610198314772!3d-6.8887469950000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e65e6d6c8b9d%3A0x6b8d2b9d0b8d9d0!2sUniversitas%20Pasundan!5e0!3m2!1sen!2sid!4v1678888888888!5m2!1sen!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                </div>
             </div>
-          </div>
+
+            <div class="footer-bottom-bar row d-flex justify-content-center align-items-center">
+                <div class="col-md-7 col-lg-8 text-center text-md-start">
+                    <p class="mb-0">
+                        © <?= date('Y') ?> MENWA Mahawarman Batalyon IV/E Universitas Pasundan. Hak Cipta Dilindungi Undang-Undang.
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-4 text-center text-md-end">
+                    <a href="kebijakan-privasi.php" class="text-white me-3">Kebijakan Privasi</a>
+                    <a href="syarat-ketentuan.php" class="text-white">Syarat & Ketentuan</a>
+                    <a href="login.php" class="admin-login-link">Login Admin</a>
+                </div>
+            </div>
         </div>
-      </div>
     </footer>
-    <!-- akhir footer -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init({
-        once: true,
-        duration: 800,
-        easing: "ease-out-quad",
-      });
-
-      window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".navbar");
-        if (window.scrollY > 50) {
-          navbar.classList.add("scrolled");
-        } else {
-          navbar.classList.remove("scrolled");
-        }
-      });
-
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-          });
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: "ease-out-quad",
         });
-      });
+
+        window.addEventListener("scroll", function() {
+            const navbar = document.querySelector(".navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth",
+                });
+            });
+        });
     </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
 </html>
